@@ -1,0 +1,62 @@
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Initializing Thread Scheduler...
+About to test Game parlor
+       Barber     1  2  3  4  5  6  7  8  9  10
+_____             E  
+X____             S  
+X____  Start   
+X____                E  
+X____                S  
+X____                   E  
+XX___                   S  
+XX___                      E  
+XXX__                      S  
+XXX__                         E  
+XXXX_                         S  
+XXXX_                            E  
+XXXXX                            S  
+XXXXX                               E  
+XXXXX                               L  
+XXXXX             B  
+XXXXX                                  E  
+XXXXX                                  L  
+XXXXX                                              E  
+XXXXX                                              L  
+XXXXX                                           E  
+XXXXX                                           L  
+XXXXX             F  
+XXXXX             L  
+XXXXX  End     
+_XXXX  Start   
+_XXXX                B  
+_XXXX                F  
+_XXXX  End     
+_XXX_  Start   
+_XXX_                   B  
+_XXX_                   F  
+_XXX_                L  
+_XXX_  End     
+_XX__                      B  
+_XX__  Start   
+_XX__                      F  
+_XX__                   L  
+_XX__  End     
+_X___  Start   
+_X___                         B  
+_X___                         F  
+_X___                      L  
+_X___  End     
+_____  Start   
+_____                            B  
+_____                            F  
+_____                         L  
+_____  End     
+_____                            L  
+Done!  The next instruction to execute will be:
+000EC8: 09000000       ret     
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 1162882
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 1162882

@@ -1,0 +1,143 @@
+code Main
+
+  -- OS Class: Project 3
+  --
+  -- <PUT YOUR NAME HERE>
+  --
+
+-----------------------------  Main  ---------------------------------
+
+  function main ()
+      InitializeScheduler ()
+      print("About to test Game parlor\n")
+	GamingParlors ()
+	ThreadFinish ()
+  endFunction
+
+  var
+    mon: GameMonitor
+    group: array [8] of Thread = new array of Thread {8 of new Thread }
+
+  function GamingParlors ()
+
+      mon = new GameMonitor
+      mon.Init ()
+
+      group[0].Init ("A")
+      group[0].Fork (GroupPlaying, 4)
+      
+      group[1].Init ("B")
+      group[1].Fork (GroupPlaying, 4)
+
+      group[2].Init ("C")
+      group[2].Fork (GroupPlaying, 5)
+
+      group[3].Init ("D")
+      group[3].Fork (GroupPlaying, 5)
+
+      group[4].Init ("E")
+      group[4].Fork (GroupPlaying, 2)
+
+      group[5].Init ("F")
+      group[5].Fork (GroupPlaying, 2)
+
+      group[6].Init ("G")
+      group[6].Fork (GroupPlaying, 1)
+
+      group[7].Init ("H")
+      group[7].Fork (GroupPlaying, 1)
+     endFunction
+
+  function GroupPlaying (numOfDice: int)
+     var
+        i: int
+      for i = 1 to 5
+        -- Group is asking
+        mon. RequestDice (numOfDice)
+        -- Group is Playing
+	currentThread.Yield()
+	-- Give back the resources
+        mon. ReturnDice (numOfDice)
+	currentThread.Yield()
+      endFor
+  endFunction
+
+  class GameMonitor
+    superclass Object
+    fields
+	moniterLock:Mutex
+	front: Condition
+	restGroup : Condition
+	numOfDiceAvail : int
+	numOfWaitingGroups : int
+
+    methods
+      Init ()
+      RequestDice (numOfDiceNeeded: int)
+      ReturnDice (numOfDiceReturned: int)
+      Print (str:String, count:int)
+  endClass
+
+  behavior GameMonitor
+
+    method Init()
+
+	front = new Condition
+	restGroup = new Condition
+	front.Init()
+	restGroup.Init()
+	numOfDiceAvail = 8
+	--numOfWaitingGroups = 0
+	moniterLock = new Mutex
+	moniterLock.Init()
+
+   endMethod
+
+    method RequestDice (numOfDiceNeeded: int)
+         
+        moniterLock.Lock()           			       -- Moniter's mutex is acquired 
+	self.Print("requests", numOfDiceNeeded)	
+	numOfWaitingGroups = numOfWaitingGroups + 1            -- Show we are waiting For the Dice
+	if numOfWaitingGroups > 1 
+		restGroup.Wait(&moniterLock)                   -- If other groups are waiting in line then wait at the end of a line
+	endIf
+	while numOfDiceAvail < numOfDiceNeeded                 -- We are at the front of wait line so check weather there are enough Dice
+       		front.Wait(&moniterLock)
+	endWhile 	
+	numOfDiceAvail = numOfDiceAvail - numOfDiceNeeded
+	numOfWaitingGroups = numOfWaitingGroups - 1
+	restGroup.Signal(&moniterLock)
+    	self.Print("proceeds with", numOfDiceNeeded)	       
+	moniterLock.Unlock()                                   -- Moniters lock released
+      endMethod
+
+    method ReturnDice (numOfDiceReturned: int)
+            
+      	moniterLock.Lock()                -- moniters lock acquired
+	numOfDiceAvail = numOfDiceAvail + numOfDiceReturned 
+	self.Print("release and adds back", numOfDiceReturned)
+	front.Signal(&moniterLock)
+	moniterLock.Unlock()              -- moniters lock released
+
+    endMethod
+
+
+    method Print(str: String, count: int)
+	var oldStatus: int
+	oldStatus = SetInterruptsTo(DISABLED)
+	print(currentThread.name)
+	print("")
+	print(str)
+	print("")
+	printInt(count)
+	nl ()
+	print ("-----------------------------------Number of dice now avail = ")
+	printInt (numOfDiceAvail)
+	nl()
+	oldStatus = SetInterruptsTo(oldStatus)
+    endMethod
+
+  endBehavior
+endCode
+
+

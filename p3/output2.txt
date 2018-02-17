@@ -1,0 +1,251 @@
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Initializing Thread Scheduler...
+About to test Game parlor
+Arequests4
+-----------------------------------Number of dice now avail = 8
+Aproceeds with4
+-----------------------------------Number of dice now avail = 4
+Brequests4
+-----------------------------------Number of dice now avail = 4
+Bproceeds with4
+-----------------------------------Number of dice now avail = 0
+Drequests5
+-----------------------------------Number of dice now avail = 0
+Arelease and adds back4
+-----------------------------------Number of dice now avail = 4
+Brelease and adds back4
+-----------------------------------Number of dice now avail = 8
+Erequests2
+-----------------------------------Number of dice now avail = 8
+Frequests2
+-----------------------------------Number of dice now avail = 8
+Grequests1
+-----------------------------------Number of dice now avail = 8
+Dproceeds with5
+-----------------------------------Number of dice now avail = 3
+Arequests4
+-----------------------------------Number of dice now avail = 3
+Crequests5
+-----------------------------------Number of dice now avail = 3
+Eproceeds with2
+-----------------------------------Number of dice now avail = 1
+Drelease and adds back5
+-----------------------------------Number of dice now avail = 6
+Brequests4
+-----------------------------------Number of dice now avail = 6
+Hrequests1
+-----------------------------------Number of dice now avail = 6
+Fproceeds with2
+-----------------------------------Number of dice now avail = 4
+Drequests5
+-----------------------------------Number of dice now avail = 4
+Erelease and adds back2
+-----------------------------------Number of dice now avail = 6
+Gproceeds with1
+-----------------------------------Number of dice now avail = 5
+Frelease and adds back2
+-----------------------------------Number of dice now avail = 7
+Erequests2
+-----------------------------------Number of dice now avail = 7
+Aproceeds with4
+-----------------------------------Number of dice now avail = 3
+Grelease and adds back1
+-----------------------------------Number of dice now avail = 4
+Frequests2
+-----------------------------------Number of dice now avail = 4
+Arelease and adds back4
+-----------------------------------Number of dice now avail = 8
+Grequests1
+-----------------------------------Number of dice now avail = 8
+Cproceeds with5
+-----------------------------------Number of dice now avail = 3
+Arequests4
+-----------------------------------Number of dice now avail = 3
+Crelease and adds back5
+-----------------------------------Number of dice now avail = 8
+Bproceeds with4
+-----------------------------------Number of dice now avail = 4
+Crequests5
+-----------------------------------Number of dice now avail = 4
+Hproceeds with1
+-----------------------------------Number of dice now avail = 3
+Brelease and adds back4
+-----------------------------------Number of dice now avail = 7
+Dproceeds with5
+-----------------------------------Number of dice now avail = 2
+Hrelease and adds back1
+-----------------------------------Number of dice now avail = 3
+Brequests4
+-----------------------------------Number of dice now avail = 3
+Eproceeds with2
+-----------------------------------Number of dice now avail = 1
+Drelease and adds back5
+-----------------------------------Number of dice now avail = 6
+Hrequests1
+-----------------------------------Number of dice now avail = 6
+Fproceeds with2
+-----------------------------------Number of dice now avail = 4
+Erelease and adds back2
+-----------------------------------Number of dice now avail = 6
+Drequests5
+-----------------------------------Number of dice now avail = 6
+Gproceeds with1
+-----------------------------------Number of dice now avail = 5
+Erequests2
+-----------------------------------Number of dice now avail = 5
+Frelease and adds back2
+-----------------------------------Number of dice now avail = 7
+Aproceeds with4
+-----------------------------------Number of dice now avail = 3
+Grelease and adds back1
+-----------------------------------Number of dice now avail = 4
+Frequests2
+-----------------------------------Number of dice now avail = 4
+Grequests1
+-----------------------------------Number of dice now avail = 4
+Arelease and adds back4
+-----------------------------------Number of dice now avail = 8
+Cproceeds with5
+-----------------------------------Number of dice now avail = 3
+Arequests4
+-----------------------------------Number of dice now avail = 3
+Crelease and adds back5
+-----------------------------------Number of dice now avail = 8
+Bproceeds with4
+-----------------------------------Number of dice now avail = 4
+Crequests5
+-----------------------------------Number of dice now avail = 4
+Hproceeds with1
+-----------------------------------Number of dice now avail = 3
+Brelease and adds back4
+-----------------------------------Number of dice now avail = 7
+Dproceeds with5
+-----------------------------------Number of dice now avail = 2
+Hrelease and adds back1
+-----------------------------------Number of dice now avail = 3
+Eproceeds with2
+-----------------------------------Number of dice now avail = 1
+Drelease and adds back5
+-----------------------------------Number of dice now avail = 6
+Brequests4
+-----------------------------------Number of dice now avail = 6
+Fproceeds with2
+-----------------------------------Number of dice now avail = 4
+Erelease and adds back2
+-----------------------------------Number of dice now avail = 6
+Hrequests1
+-----------------------------------Number of dice now avail = 6
+Drequests5
+-----------------------------------Number of dice now avail = 6
+Gproceeds with1
+-----------------------------------Number of dice now avail = 5
+Frelease and adds back2
+-----------------------------------Number of dice now avail = 7
+Erequests2
+-----------------------------------Number of dice now avail = 7
+Aproceeds with4
+-----------------------------------Number of dice now avail = 3
+Grelease and adds back1
+-----------------------------------Number of dice now avail = 4
+Frequests2
+-----------------------------------Number of dice now avail = 4
+Arelease and adds back4
+-----------------------------------Number of dice now avail = 8
+Grequests1
+-----------------------------------Number of dice now avail = 8
+Cproceeds with5
+-----------------------------------Number of dice now avail = 3
+Arequests4
+-----------------------------------Number of dice now avail = 3
+Crelease and adds back5
+-----------------------------------Number of dice now avail = 8
+Bproceeds with4
+-----------------------------------Number of dice now avail = 4
+Crequests5
+-----------------------------------Number of dice now avail = 4
+Hproceeds with1
+-----------------------------------Number of dice now avail = 3
+Brelease and adds back4
+-----------------------------------Number of dice now avail = 7
+Dproceeds with5
+-----------------------------------Number of dice now avail = 2
+Hrelease and adds back1
+-----------------------------------Number of dice now avail = 3
+Brequests4
+-----------------------------------Number of dice now avail = 3
+Eproceeds with2
+-----------------------------------Number of dice now avail = 1
+Drelease and adds back5
+-----------------------------------Number of dice now avail = 6
+Hrequests1
+-----------------------------------Number of dice now avail = 6
+Fproceeds with2
+-----------------------------------Number of dice now avail = 4
+Erelease and adds back2
+-----------------------------------Number of dice now avail = 6
+Drequests5
+-----------------------------------Number of dice now avail = 6
+Gproceeds with1
+-----------------------------------Number of dice now avail = 5
+Frelease and adds back2
+-----------------------------------Number of dice now avail = 7
+Erequests2
+-----------------------------------Number of dice now avail = 7
+Aproceeds with4
+-----------------------------------Number of dice now avail = 3
+Grelease and adds back1
+-----------------------------------Number of dice now avail = 4
+Frequests2
+-----------------------------------Number of dice now avail = 4
+Arelease and adds back4
+-----------------------------------Number of dice now avail = 8
+Grequests1
+-----------------------------------Number of dice now avail = 8
+Cproceeds with5
+-----------------------------------Number of dice now avail = 3
+Crelease and adds back5
+-----------------------------------Number of dice now avail = 8
+Bproceeds with4
+-----------------------------------Number of dice now avail = 4
+Crequests5
+-----------------------------------Number of dice now avail = 4
+Hproceeds with1
+-----------------------------------Number of dice now avail = 3
+Brelease and adds back4
+-----------------------------------Number of dice now avail = 7
+Dproceeds with5
+-----------------------------------Number of dice now avail = 2
+Hrelease and adds back1
+-----------------------------------Number of dice now avail = 3
+Eproceeds with2
+-----------------------------------Number of dice now avail = 1
+Drelease and adds back5
+-----------------------------------Number of dice now avail = 6
+Fproceeds with2
+-----------------------------------Number of dice now avail = 4
+Erelease and adds back2
+-----------------------------------Number of dice now avail = 6
+Hrequests1
+-----------------------------------Number of dice now avail = 6
+Gproceeds with1
+-----------------------------------Number of dice now avail = 5
+Frelease and adds back2
+-----------------------------------Number of dice now avail = 7
+Cproceeds with5
+-----------------------------------Number of dice now avail = 2
+Grelease and adds back1
+-----------------------------------Number of dice now avail = 3
+Hproceeds with1
+-----------------------------------Number of dice now avail = 2
+Crelease and adds back5
+-----------------------------------Number of dice now avail = 7
+Hrelease and adds back1
+-----------------------------------Number of dice now avail = 8
+Done!  The next instruction to execute will be:
+000EC8: 09000000       ret     
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 547174
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 547174

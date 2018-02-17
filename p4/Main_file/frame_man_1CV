@@ -1,0 +1,77 @@
+ ----------  FrameManager . GetNewFrames  ----------
+
+      method GetNewFrames (aPageTable: ptr to AddrSpace, numFramesNeeded: int)
+         var 
+         	i: int
+         	frameAddr, f: int
+
+         	-- Acquire the lock
+         	frameManagerLock.Lock ()
+		
+		-- page table registers in the CPU to point to this page table
+         	aPageTable.SetToThisPageTable ()
+
+         	-- Wait on condition until enough free frames to satifsy request.
+         	while numberFreeFrames < numFramesNeeded
+           		newFramesAvailable.Wait (& frameManagerLock)
+         	endWhile
+
+         	--   Do a loop for each of the frames and
+         	--   Determines which frame is free in framesInUse BitMap
+         	--   Get address of that free frame
+         	--   Allocates the frame and store address of the allocated frame
+         	for i = 0 to numFramesNeeded-1
+          		f = framesInUse.FindZeroAndSet ()
+           		frameAddr = PHYSICAL_ADDRESS_OF_FIRST_PAGE_FRAME + (f * PAGE_SIZE)
+           		aPageTable.SetFrameAddr (i, frameAddr)
+         	endFor
+
+         -- Adjust number of free frames 
+         numberFreeFrames = numberFreeFrames - numFramesNeeded
+
+          -- Set pageTable numberOfPages to number of frames allocated
+         aPageTable.numberOfPages = aPageTable.numberOfPages + numFramesNeeded
+
+         -- Release the lock
+         frameManagerLock.Unlock ()
+      endMethod
+
+      ----------  FrameManager . ReturnAllFrames  ----------
+
+      method ReturnAllFrames (aPageTable: ptr to AddrSpace)
+          var 
+          	i: int
+          	numFramesToReturn: int
+          	frameAddr: int
+          	bitNumber: int
+
+          	
+          	frameManagerLock.Lock ()
+         	-- page table registers in the CPU to point to this page table
+          	aPageTable.SetToThisPageTable ()
+
+          	-- Get the number of frames being return
+          	numFramesToReturn = aPageTable.numberOfPages 
+          
+          	--   Loop on number of frames being returned
+          	--   Get frame address from page table (see which frame is possessed)
+          	--   Get the bitnumber corresponding to the possessed frame
+          	--   Then clear each bit in the possessed frame
+
+          	for i = 0 to numFramesToReturn-1
+            		frameAddr = aPageTable.ExtractFrameAddr (i)        
+            		bitNumber = ( frameAddr -  PHYSICAL_ADDRESS_OF_FIRST_PAGE_FRAME ) / PAGE_SIZE
+            		framesInUse.ClearBit (bitNumber)
+            		numberFreeFrames = numberFreeFrames + 1 
+          	endFor
+
+          	-- "notify" any waiting threads that more frameshave become available
+          	newFramesAvailable.Broadcast (& frameManagerLock)
+
+          	-- Now that the frames have been returned, update the page table
+          	aPageTable.numberOfPages = aPageTable.numberOfPages - numFramesToReturn
+
+          frameManagerLock.Unlock ()
+        endMethod
+
+    
