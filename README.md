@@ -1,2 +1,4 @@
 # CS510_OS
-Operating system kernel implementation
+The projectis based on the BLITZ system. BLITZ consists of software to emulated a CPU and some simple devices, together with its own assembler, linker, loader, and high level programming language, called KPL. KPL has been used to write a complete operating system for BLITZ.I consructed my own operating system kernel, starting with basic synchronization primitives, then using them to construct various resource managers within your kernel that can be invoked concurrently. Eventually, I implemented system calls to invoke these resource managers from user-level programs.
+
+The emulated CPU and devices are representative of real-world systems, but without some of the low-level complexity that complicates the process of learning about the key underlying concepts. By using BLITZ, I able to study, in detail, the low-level operating system code that interacts with the hardware, as well as design, code and test their own modifications to the operating system.
